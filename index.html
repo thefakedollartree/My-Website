@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dollar Tree - Shop The Season</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,800" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylesheet.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    .fade-in {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+    .fade-in.visible {
+      opacity: 1;
+    }
+    .lift-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .lift-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+
+      
+      
+
+      
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        const target = this.hash;
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: $(target).offset().top
+          }, 600);
+        }
+      });
+
+    });
+  </script>
+<script>
+$(document).ready(function(){
+  $("body").css("display", "none").fadeIn(1000);
+
+  $(".interactive-img").hover(
+    function() {
+      $(this).stop().animate({ transform: "scale(1.1)" }, {
+        step: function(now, fx) {
+          if (fx.prop === "transform") {
+            $(this).css("transform", "scale(1.1)");
+          }
+        },
+        duration: 300
+      });
+    },
+    function() {
+      $(this).stop().animate({ transform: "scale(1)" }, {
+        step: function(now, fx) {
+          if (fx.prop === "transform") {
+            $(this).css("transform", "scale(1)");
+          }
+        },
+        duration: 300
+      });
+    }
+  );
+
+});
+
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 200) {
+      $('#scrollTopBtn').fadeIn();
+    } else {
+      $('#scrollTopBtn').fadeOut();
+    }
+  });
+
+  $("#scrollTopBtn").click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+</script>
+<style>
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href=""><img src="IMG/logo.png" alt="Dollar Tree Logo" /></a>
+      <ul>
+        <li><a href="https://www.dollartree.com/holidays/valentines-day"class="lift-hover" title="Browse seasonal picks">Shop The Season</a></li>
+        <li><a href="#categories"class="lift-hover" title="Browse seasonal picks">Categories</a></li>
+        <li><a href="#for-you"class="lift-hover" title="Browse seasonal picks">For You</a></li>
+      </ul>
+      <form>
+        <input type="search" placeholder="Search" />
+        <button type="submit">🔍</button>
+      </form>
+      <div class="user-actions">
+        <a href="https://locations.dollartree.com/store-locator#"><img src="IMG/Location.png"></a>
+        <a href="https://www.dollartree.com/home?loggedIn=false&page=profile"><img src="IMG/Profile.png"></a>
+        <a href="https://www.dollartree.com/cart"><img src="IMG/Cart.png"></a>
+      </div>
+    </nav>
+  </header>
+
+    <main>
+    <section class="hero">
+      <img src="https://c.animaapp.com/LK2O8pyN/img/group-4@2x.png" alt="Shop The Season" />
+    </section>
+
+    <section id="categories">
+      <h2>Categories</h2>
+      <div class="grid">
+        <a href="https://www.dollartree.com/department/seasons-occasions" class="card">Season &amp; Celebration</a>
+        <a href="https://www.dollartree.com/department/food-candy-drinks" class="card">Food &amp; Drink</a>
+        <a href="https://www.dollartree.com/department/household-pet-supplies" class="card">Home &amp; Living</a>
+        <a href="https://www.dollartree.com/toys-books-puzzles-games/toys" class="card">Toys</a>
+        <a href="https://www.dollartree.com/department/health-beauty-supplies" class="card">Health &amp; Beauty</a>
+        <a href="https://www.dollartree.com/department/office-school-supplies" class="card">School &amp; Office</a>
+      </div>
+    </section>
+
+    <section id="for-you">
+      <h2>For You</h2>
+      <div class="grid">
+        <div class="product-card">
+          <img src="IMG/Dawn.png"class="interactive-img" style="width:600px;" alt="Nerds Gummy Clusters" />
+          <h3>Dawns Dish Soap</h3>
+          <a href="https://www.dollartree.com/dawn-ultra-original-scent-dishwashing-liquid-8oz-bottles/257613">View Product</a>
+        </div>
+        <div class="product-card">
+          <img src="IMG/Pepsi.png"class="interactive-img" style="width:600px;" alt="Pepsi" />
+          <h3>Pepsi</h3>
+          <a href="https://www.dollartree.com/pepsi-125-liter/237866">View Product</a>
+        </div>
+        <div class="product-card">
+          <img src="IMG/Nerds.png"class="interactive-img" style="width:600px;" />
+          <h3>Nerds Gummy Clusters</h3>
+          <a href="https://www.dollartree.com/product/323481">View Product</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <ul>
+          <li>Mission and Values</li>
+          <li>Product Offering</li>
+          <li>Customer Base</li>
+          <li>Growth and Expansion</li>
+          <li>Corporate Responsibility</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li>Customer Service</li>
+          <li>Order &amp; Shipping</li>
+          <li>Store Locator</li>
+          <li>Product Support</li>
+          <li>Careers Information</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Info</h4>
+        <ul>
+          <li>Company Overview</li>
+          <li>Product Range</li>
+          <li>Store Experience</li>
+          <li>Community Impact</li>
+          <li>Career Opportunities</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Sign Up For Discounts &amp; More</h4>
+        <form>
+          <input type="email" placeholder="Email Address" />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    </footer>
+  <script src="script.js"></script>
+  <section class="contact-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or comments, feel free to reach out to us!</p>
+    <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLScG5YJJPdL6NRUdsl1fjBaE36rSHGJyi91dV0W8rlGFSyc5TA/viewform?usp=header" target="_blank">
+      Fill Out the Contact Form
+    </a>
+  </div>
+</section>
+<a href="#" id="scrollTopBtn" title="Go to top" style="
+  display:none;
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  z-index:99;
+  border:none;
+  outline:none;
+  background-color:#555;
+  color:white;
+  cursor:pointer;
+  padding:10px 15px;
+  border-radius:10px;
+  font-size:18px;
+"></a>
+</body>
+</html>
